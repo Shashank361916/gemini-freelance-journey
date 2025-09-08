@@ -1,74 +1,96 @@
-\# Project #1: Knowledge Base Bot 📚
+# My AI Freelance Journey 🚀
 
+Hello! My name is Shashank, and this repository is a living journal of my journey to become a freelance AI Agent developer. I'm based in Kurnool, India, and I'm passionate about building practical, intelligent solutions for real-world business problems.
 
-
-A web application that allows you to chat with your PDF documents, built with Streamlit, Google Gemini, and LangChain. This app uses a RAG (Retrieval-Augmented Generation) pipeline to provide accurate answers based on the content of a user-provided PDF.
-
-
-
-\## Screenshot
-
-
-
-(You can add a screenshot here later by editing the file on GitHub and dragging the image in.)
-
-
+This is where I'm documenting my projects, from the first line of code to the final, polished application. Feel free to explore and see what I'm building!
 
 ---
 
+## Project #1: Knowledge Base Bot 📚
+
+Have you ever wished you could just *talk* to your documents? That's the problem I set out to solve with this project. It's a web app that lets you upload a PDF and then ask it questions, getting accurate answers based only on the document's content.
+
+This was my first major project to master **Retrieval-Augmented Generation (RAG)**, a key technique for building AI that can reason about private data.
+
+### Screenshot
 
 
-\## Technologies Used
+*(Here's a quick look at the app in action!)*
 
-\- Python
+### Tech Stack
+- **Python**
+- **Streamlit** (for the web interface)
+- **Google Gemini** (as the core LLM)
+- **LangChain** (for the RAG framework)
+- **FAISS** (for the local vector store)
 
-\- Streamlit (for the web interface)
+### How to Get it Running
 
-\- Google Gemini (as the core LLM)
-
-\- LangChain (for the RAG framework)
-
-\- FAISS (for the vector store)
-
-
-
----
-
-
-
-\## How to Run This Project Locally
-
-
-
-Follow these steps to set up and run the project on your own machine.
-
-
-
-\*\*1. Clone the Repository\*\*
-
+**1. Clone the Repository**
 ```bash
-
-git clone \[https://github.com/Your-Username/gemini-freelance-journey.git](https://github.com/Your-Username/gemini-freelance-journey.git)
-
+git clone [https://github.com/Your-Username/gemini-freelance-journey.git](https://github.com/Your-Username/gemini-freelance-journey.git)
 cd gemini-freelance-journey
+2. Set Up Your Environment
 
-(.venv) C:\Users\MSI\Documents\ai-freelance-journey>python inquiry_agent.py
-Assembling the new Tool Calling Agent...
-Agent is ready. Giving it an inquiry to handle...
+Bash
 
+# Create and activate a virtual environment
+python -m venv .venv
+# On Windows, use `.venv\Scripts\activate`
+.venv\Scripts\activate  
 
-> Entering new AgentExecutor chain...
+# Install all the required libraries
+pip install -r requirements.txt
+3. Add Your API Key
 
-Invoking: `classify_inquiry_tool` with `{'inquiry': "I'm very interested in your enterprise plan. Please can you provide more details and pricing?"}`
+Create a file named .env.
 
+Inside, add your Google API key:
 
-sales
-Invoking: `draft_sales_reply_tool` with `{'inquiry': "I'm very interested in your enterprise plan. Please can you provide more details and pricing?"}`
+GOOGLE_API_KEY="YOUR_API_KEY_HERE"
+4. Add Your Document
 
+Find a PDF you want to chat with and place it in the project folder.
 
-Thank you for your interest in our enterprise plan. We appreciate you reaching out.  A sales representative will be in contact with you shortly to discuss your needs and provide you with detailed information and pricing.Thank you for your interest in our enterprise plan. We appreciate you reaching out.  A sales representative will be in contact with you shortly to discuss your needs and provide you with detailed information and pricing.
+Rename it to document.pdf.
 
-> Finished chain.
+5. Create the "Brain"
 
---- Agent's Final Answer ---
-Thank you for your interest in our enterprise plan. We appreciate you reaching out.  A sales representative will be in contact with you shortly to discuss your needs and provide you with detailed information and pricing.
+This command processes your PDF and creates a searchable vector store. You only need to run this once per document.
+
+Bash
+
+python create_vector_store.py
+6. Run the App!
+
+Now, start the chat application.
+
+Bash
+
+streamlit run knowledge_base_bot.py
+Project #2: Automated Inquiry Agent 🤖
+This project was about making AI take action. I built an autonomous agent that can read incoming customer messages, figure out what they're about (like a sales question or a support ticket), and then draft a suitable reply. This is a huge step towards automating real business workflows.
+
+The magic here is the agent's ability to use a "toolbelt" of custom functions to perform its multi-step task without human intervention.
+
+Agent's Chain of Thought (Example)
+!
+(You can see the agent's reasoning process in this screenshot from my terminal.)
+
+Tech Stack
+LangChain Agents (AgentExecutor, create_tool_calling_agent)
+
+Custom Tools for multi-step reasoning
+
+Google Gemini 1.5 Flash
+
+How to Run
+Make sure your environment is set up and libraries from requirements.txt are installed.
+
+Ensure your .env file is configured with your GOOGLE_API_KEY.
+
+Run the agent from your terminal:
+
+Bash
+
+python inquiry_agent.py
