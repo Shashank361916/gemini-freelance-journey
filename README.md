@@ -52,3 +52,23 @@ git clone \[https://github.com/Your-Username/gemini-freelance-journey.git](https
 
 cd gemini-freelance-journey
 
+(.venv) C:\Users\MSI\Documents\ai-freelance-journey>python inquiry_agent.py
+Assembling the new Tool Calling Agent...
+Agent is ready. Giving it an inquiry to handle...
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `classify_inquiry_tool` with `{'inquiry': "I'm very interested in your enterprise plan. Please can you provide more details and pricing?"}`
+
+
+sales
+Invoking: `draft_sales_reply_tool` with `{'inquiry': "I'm very interested in your enterprise plan. Please can you provide more details and pricing?"}`
+
+
+Thank you for your interest in our enterprise plan. We appreciate you reaching out.  A sales representative will be in contact with you shortly to discuss your needs and provide you with detailed information and pricing.Thank you for your interest in our enterprise plan. We appreciate you reaching out.  A sales representative will be in contact with you shortly to discuss your needs and provide you with detailed information and pricing.
+
+> Finished chain.
+
+--- Agent's Final Answer ---
+Thank you for your interest in our enterprise plan. We appreciate you reaching out.  A sales representative will be in contact with you shortly to discuss your needs and provide you with detailed information and pricing.
