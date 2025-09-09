@@ -1,6 +1,6 @@
 # My AI Freelance Journey 🚀
 
-Hello! My name is Shashank, and this repository is a living journal of my journey to become a freelance AI Agent developer. I'm based in Kurnool, India, and I'm passionate about building practical, intelligent solutions for real-world business problems.
+Hello! My name is Shashank, and this repository is a living journal of my journey to become a freelance AI Agent developer. I'm based in Bangalore, India, and I'm passionate about building practical, intelligent solutions for real-world business problems.
 
 This is where I'm documenting my projects, from the first line of code to the final, polished application. Feel free to explore and see what I'm building!
 
